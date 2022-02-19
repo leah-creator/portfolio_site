@@ -158,8 +158,8 @@ nav>ul>li>a {
 /*View Project buttons*/
 .button {
   display: inline-block;
-  float: right;
-  background-color: #C48FC9;
+  float: center;
+  background-color: #50657a;
   color: #white;
   margin-top: 50px;
   font-weight: 700;
@@ -170,8 +170,8 @@ nav>ul>li>a {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  -webkit-transition: color 400ms ease-in-out;
-  transition: #A779AB 400ms ease-in-out;
+  transition: color #6984b3 400ms ease-in-out;
+  transition: #6984b3 400ms ease-in-out;
 }
 
 .button:after {
@@ -183,14 +183,15 @@ nav>ul>li>a {
   transform: translatex(-50%);
   width: 0;
   height: 100%;
-  background: #A779AB;
+  background: #718eab
   z-index: -1;
-  -webkit-transition: width 200ms ease-in-out;
+  -webkit-transition: color: #718eab width 200ms ease-in-out;
   transition: width 200ms ease-in-out;
 }
 
 .button:hover {
-  color: #FFEF7F;
+  text-color: black;
+  color: #black;
 }
 
 .button:hover:after {

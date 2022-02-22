@@ -1,4 +1,11 @@
-* {
+  /*
+  Colors used:
+  Background Color: #142126
+  Primary text color: White
+  Secondary Color: Black
+  */
+
+  * {
   box-sizing: border-box;
   margin: 0;
   padding: 0 15px;

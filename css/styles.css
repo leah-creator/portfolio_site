@@ -4,16 +4,16 @@
   Primary text color: White
   Secondary Color: Black
   */
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0px;
-  color: inherit;
-}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+  }
 
   header {
     background-color: black;
@@ -64,7 +64,7 @@ html {
     font-size: 2.0em;
     font-weight: 700;
     padding: 100px;
-    margin: 10px
+    margin: 10px;
   }
 
   h2 {
@@ -73,7 +73,6 @@ html {
     font-size: 2.0em;
     font-weight: 700;
     padding: 50px 50px;
-    margin: 10;
   }
 
   h3 {
@@ -92,11 +91,8 @@ html {
   }
 
   p {
-    text-align: centers;
     font-size: 1.0em;
     font-weight: 400;
-    padding: 100;
-    margin: 10;
   }
 
   .logo {
@@ -104,7 +100,6 @@ html {
     float: left;
   }
 
-  /* Layout styling */
   .container {
     padding: 0 15px;
   }
@@ -117,7 +112,7 @@ html {
   }
 
   #hero span h1 {
-    display:inline-grid;
+    display: inline-grid;
     text-align: center;
     font-weight: 700;
   }
@@ -134,7 +129,7 @@ html {
   }
 
   #contact {
-    text-align:center;
+    text-align: center;
     padding: 10px;
   }
 
@@ -151,11 +146,6 @@ html {
     text-align: center;
   }
 
-svg {
-  text-align: center;
-  padding: 1000px:
-
-}
   .email {
     font-size: 1.50em;
     text-transform: uppercase;
@@ -196,10 +186,8 @@ svg {
     text-decoration: none;
   }
 
-  /*buttons*/
   .button {
     display: inline-block;
-    float: center;
     background-color: #50657a;
     color: white;
     margin-top: 50px;
@@ -235,54 +223,40 @@ svg {
     width: 110%;
   }
 
-  /* footer styling */
+  footer {
+    background-color: black;
+    width: 100%;
+  }
 
-footer {
-  background-color:black;
-  width: 100%;
-}
-
-about-page{
-
-
-}
-/* ==============================
-  Medium devices (640px and larger)
-  ================================= */
-@media only screen and (min-width: 640px) {
-  main
-
-    .col-md-6 {
+  @media only screen and (min-width: 640px) {
+      .col-md-6 {
       width: 50%;
       float: left;
       padding: 100px 50px;
     }
+
     .col-md-7 {
       width: 50%;
       float: left;
       padding: 100px 50px;
     }
 
-    .col-md-6 {
-      width: 50%;
-      float: left;
-      padding: 100px 50px;
-    }
     .col-lg-7 {
       width: 50%;
       float: left;
-      padding: 100px 50px;
+      padding: 50px 30px;
     }
-/* ==============================
-    Large devices (1024px or larger)
-    ================================= */
-@media only screen and (min-width: 1024px) {
-  * {
-    box-sizing: border-box;
+    .col-lg-5 {
+      width: 50%;
+      float: left;
+      padding: 50px 50px;
+    }
   }
 
-/* ==============================
-X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {
-}
+  @media only screen and (min-width: 1024px) {
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {}

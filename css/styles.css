@@ -15,14 +15,6 @@ html {
   color: inherit;
 }
 
-/* ==============================
-  Medium devices (640px and larger)
-  ================================= */
-@media only screen and (min-width: 640px) {
-  main {
-    padding-top: 150px;
-  }
-
   header {
     background-color: black;
     text-align: unset;
@@ -70,21 +62,21 @@ html {
     text-align: center;
     font-size: 2.0em;
     font-weight: 700;
-    padding: 25px;
+    padding: 100px;
     margin: 10px
   }
 
   h2 {
-    text-align: left;
+    text-align: center;
     background-color: black;
     font-size: 2.0em;
     font-weight: 700;
-    padding: 130px 100px;
-    margin: 0;
+    padding: 50px 50px;
+    margin: 10;
   }
 
   h3 {
-    text-align: left;
+    text-align: center;
     font-size: 1.75em;
     font-weight: 300;
     padding: 10px 10px;
@@ -99,7 +91,7 @@ html {
   }
 
   p {
-    text-align: left;
+    text-align: centers;
     font-size: 1.0em;
     font-weight: 400;
     padding: 100;
@@ -124,7 +116,7 @@ html {
   }
 
   #hero span h1 {
-    display:grid;
+    display:inline-grid;
     text-align: center;
     font-weight: 700;
   }
@@ -141,18 +133,49 @@ html {
   }
 
   #contact {
-    text-align: right
+    text-align:center;
+    padding: 0px;
   }
 
-  #contact h1 {
+  #contact h2 {
+    text-align: center;
     font-weight: 700;
-    padding-bottom: 25px;
-    font-size: 2.5em;
+    padding-bottom: 20px;
+    font-size: 2.0em;
   }
 
   #contact p {
-    padding-bottom: 25px;
-    font-size: 2.5em;
+    padding: 10px 50px;
+    font-size: 1.0em;
+    text-align: center;
+  }
+
+  .email {
+    font-size: 1.50em;
+    text-transform: uppercase;
+    max-width: 10%;
+  }
+
+  .email:hover {
+    color: #FFEF7F;
+    right: 0;
+    text-decoration: none;
+  }
+
+  .email:hover:after {
+    border-color: #FFEF7F;
+    right: 0;
+  }
+
+  .email:after {
+    border-radius: 1em;
+    border-top: 0.1em solid #FFEF7F;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 0.14em;
+    left: 0;
+    transition: right 0.4s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
   }
 
   a {
@@ -207,90 +230,49 @@ html {
   }
 
   /* footer styling */
+
+footer {
+  background-color:black;
+  width: 100%;
 }
 
-.email {
-  font-size: 1.50em;
-  text-transform: uppercase;
-  max-width: 80%;
-}
+about-page{
 
-.email:hover {
-  color: #FFEF7F;
-  right: 0;
-  text-decoration: none;
-}
 
-.email:hover:after {
-  border-color: #FFEF7F;
-  right: 0;
 }
+/* ==============================
+  Medium devices (640px and larger)
+  ================================= */
+@media only screen and (min-width: 640px) {
+  main
 
-.email:after {
-  border-radius: 1em;
-  border-top: 0.1em solid #FFEF7F;
-  content: "";
-  position: absolute;
-  right: 100%;
-  bottom: 0.14em;
-  left: 0;
-  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
-}
+    .col-md-6 {
+      width: 50%;
+      float: left;
+      padding: 100px 50px;
+    }
+    .col-md-7 {
+      width: 50%;
+      float: left;
+      padding: 100px 50px;
+    }
 
-.col-md-1 {
-  width: 50%;
-  float: left;
-  padding: 100px 50px;
-}
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.col-md-2 {
-  width: 50%;
-  float: right;
-  padding: 25px 50px;
-}
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.col-md-3 {
-  width: 50%;
-  float: right;
-}
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.col-md-4 {
-  width: 50%;
-  float: left;
-  padding: 150px;
-}
-
+    .col-md-6 {
+      width: 50%;
+      float: left;
+      padding: 100px 50px;
+    }
+    .col-lg-7 {
+      width: 50%;
+      float: left;
+      padding: 100px 50px;
+    }
 /* ==============================
     Large devices (1024px or larger)
     ================================= */
 @media only screen and (min-width: 1024px) {
   * {
     box-sizing: border-box;
-  }
-
-  .footer {
-    background-color: #24262b;
-    padding: 70px 0;
-    width: 25%;
-    padding: 0 15px;
   }
 
 /* ==============================

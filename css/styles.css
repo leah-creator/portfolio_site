@@ -1,4 +1,4 @@
-  /*
+     /*
   Colors used:
   Background Color: #142126
   Primary text color: White
@@ -93,6 +93,7 @@
   p {
     font-size: 1.0em;
     font-weight: 400;
+    padding: 50px 0px;
   }
 
   .logo {
@@ -101,7 +102,8 @@
   }
 
   .container {
-    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0px auto;
   }
 
   #hero {
@@ -117,10 +119,10 @@
     font-weight: 700;
   }
 
-  .row {
-    margin: 25px 0;
-    display: inline-block;
-    width: 100%;
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 
   #work .row {
@@ -133,7 +135,7 @@
     padding: 10px;
   }
 
-  #contact h2 {
+  #contact h1 {
     text-align: center;
     font-weight: 700;
     padding-bottom: 20px;
@@ -224,41 +226,47 @@
 
   footer {
     background-color: black;
-    width: 100%;
+
+  }
+
+  h3 ul {
+    width: auto;
+    float: center;
+    margin-top: 15px;
+    list-style-type:none;
+    padding: 10;
+  }
+
+  ul li {
+    display: inline-block;
+  }
+
+  h3 ul li{
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 
   @media only screen and (min-width: 640px) {
+    [class*="col-"] {
+  float: left;
+  padding: 0px 15px;
+}
     .col-md-6 {
       width: 50%;
-      float: left;
-      padding: 100px 50px;
     }
 
-    .col-md-7 {
-      width: 50%;
-      float: left;
-      padding: 100px 50px;
-    }
 
-    .col-lg-7 {
-      width: 50%;
-      float: left;
-      padding: 50px 30px;
-    }
-
-    .col-lg-5 {
-      width: 50%;
-      float: left;
-      padding: 50px 50px;
-    }
   }
 
   @media only screen and (min-width: 1024px) {
-    * {
-      box-sizing: border-box;
+    .col-lg-7 {
+      width: 60%;
+    }
+
+    .col-lg-5 {
+      width: 40%;
     }
   }
 
-  @media only screen and (min-width: 1440px) {
-
-  }
+  @media only screen and (min-width: 1440px) {}

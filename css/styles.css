@@ -23,24 +23,6 @@
        margin: 0;
      }
 
-     nav>ul {
-       width: auto;
-       float: right;
-       margin-top: 15px;
-       list-style-type: none;
-       padding: 0;
-     }
-
-     nav>ul>li {
-       display: inline-block;
-     }
-
-     nav>ul>li>a {
-       padding: 0 25px;
-       text-transform: uppercase;
-       font-weight: 700;
-     }
-
      body {
        background-color: #142126;
        text-align: center;
@@ -51,6 +33,10 @@
        color: white;
      }
 
+     main {
+       padding-top: 56px;
+     }
+     
      img {
        width: 100%;
      }
@@ -228,22 +214,46 @@
        background-color: black;
      }
 
-     h3 ul {
-       width: auto;
-       float: center;
-       margin-top: 15px;
-       list-style-type: none;
-       padding: 10;
+     /* Navigation items are hidden except menu icon for screens less than 640px, small screens */
+     .navtoggle li:not(:last-child) {
+       display: none;
      }
 
-     ul li {
-       display: inline-block;
+     /* Menu bar's position is relative to the logo. navtoggle.responsive is a new class for later javascript work */
+     /* Postion of the menu icon in relationship to the header */
+     .navtoggle,
+     .navtoggle.responsive {
+       position: relative;
      }
 
-     h3 ul li {
-       padding: 0 25px;
-       text-transform: uppercase;
-       font-weight: 700;
+     /* Menu bar icon*/
+     .navtoggle li .icon {
+       position: absolute;
+       right: 0;
+       top: 20px;
+       font-size: 24px;
+       padding-right: 10px;
+       color: #000000;
+     }
+
+     /* Will override when responsive class is toggled */
+     .navtoggle.responsive li {
+       display: block;
+     }
+
+     /* Styling for menu icon when toggled */
+     .navtoggle.responsive nav {
+       padding: 24px 0 0;
+     }
+
+     .navtoggle.responsive li {
+       display: block;
+       padding: 10px 0;
+       border-top: 1px solid rgba(255, 127, 80, 0.5);
+     }
+
+     .navtoggle.responsive li:last-child {
+       padding: 0 0 10px;
      }
 
      @keyframes color-change {
@@ -258,67 +268,120 @@
        100% {
          fill: #f76414;
        }
-}
-       .sun {
-         animation-duration: 4s;
-         animation-name: color-change;
-         animation-iteration-count: infinite;
-         animation-direction: alternate;
-         animation-timing-function: linear;
-       }
-       @keyframes cloud-move {
-           from {
-             transform: translate(0, 50px);
-           }
+     }
 
-           to {
-             transform: translate(200px, 50px);
-           }
-         }
+     .sun {
+       animation-duration: 4s;
+       animation-name: color-change;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+       animation-timing-function: linear;
+     }
 
-         .cloud-front {
-           animation-duration: 30s;
-           animation-name: cloud-move;
-           animation-iteration-count: infinite;
-           animation-direction: alternate;
-           animation-timing-function: linear;
-         }
-
-         @keyframes cloud-move-reverse {
-           from {
-             transform: translate(446px, 48px);
-           }
-
-           to {
-             transform: translate(100px, 48px);
-           }
-         }
-
-         .cloud-back {
-           animation: 34s cloud-move-reverse infinite alternate linear;
-         }
-
-
-
-       @media only screen and (min-width: 640px) {
-         [class*="col-"] {
-           float: left;
-           padding: 0px 15px;
-         }
-
-         .col-md-6 {
-           width: 50%;
-         }
+     @keyframes cloud-move {
+       from {
+         transform: translate(0, 50px);
        }
 
-       @media only screen and (min-width: 1024px) {
-         .col-lg-7 {
-           width: 60%;
-         }
+       to {
+         transform: translate(200px, 50px);
+       }
+     }
 
-         .col-lg-5 {
-           width: 40%;
-         }
+     .cloud-front {
+       animation-duration: 30s;
+       animation-name: cloud-move;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+       animation-timing-function: linear;
+     }
+
+     @keyframes cloud-move-reverse {
+       from {
+         transform: translate(446px, 48px);
        }
 
-       @media only screen and (min-width: 1440px) {}
+       to {
+         transform: translate(100px, 48px);
+       }
+     }
+
+     .cloud-back {
+       animation: 34s cloud-move-reverse infinite alternate linear;
+     }
+
+     /* ---------- Media queries-------------------- */
+     @media only screen and (min-width: 640px) {
+       header {
+         background-color: black;
+         position: relative;
+       }
+
+       nav>ul {
+         width: auto;
+         float: right;
+         margin-top: 15px;
+         list-style-type: none;
+       }
+
+       nav>ul>li {
+         display: inline-block;
+       }
+
+       nav>ul>li>a {
+         padding: 0 25px;
+         text-transform: uppercase;
+         font-weight: 700;
+       }
+
+       ul li {
+         display: inline-block;
+       }
+
+       h3 ul li {
+         padding: 0 25px;
+         text-transform: uppercase;
+         font-weight: 700;
+       }
+
+       /* Removes menu icon and lists navigation items for larger than 640px*/
+       .navtoggle li:not(:last-child) {
+         display: inline-block;
+       }
+
+       .navtoggle li:last-child {
+         display: none;
+       }
+
+       .navtoggle.responsive li {
+         border-top: 0;
+       }
+
+       nav>ul {
+         list-style-type: none;
+         padding: 0;
+       }
+
+       nav>ul {
+         margin: 1em 0;
+       }
+
+       [class*="col-"] {
+         float: left;
+         padding: 0px 15px;
+       }
+
+       .col-md-6 {
+         width: 50%;
+       }
+     }
+
+     @media only screen and (min-width: 1024px) {
+       .col-lg-7 {
+         width: 60%;
+       }
+
+       .col-lg-5 {
+         width: 40%;
+       }
+     }

@@ -70,6 +70,11 @@
        padding: 50px 0px;
      }
 
+     .logo {
+       max-width: 120px;
+       float: left;
+     }
+
      .container {
        max-width: 1200px;
        margin: 0px auto;
@@ -193,16 +198,10 @@
        width: 110%;
      }
 
-     footer {
-       background-color: black;
-     }
-
      h3 ul {
        width: auto;
        float: center;
-       margin-top: 15px;
        list-style-type: none;
-       padding: 10;
      }
 
      ul li {
@@ -210,69 +209,15 @@
      }
 
      h3 ul li {
-       padding: 0 25px;
        text-transform: uppercase;
        font-weight: 700;
      }
 
-     /* ---------- Nav bar elements -------------------- */
-     .logo {
-       max-width: 125px;
-       max-height: 150px;
-       float:left
-     }
-
-     header {
+     footer {
        background-color: black;
-       position: relative;
-       padding: 10px 0 55px;
-       margin: 0;
      }
 
-     main {
-       padding-top: 56px;
-     }
-
-     .logo {
-       max-width: 150px;
-     }
-
-     .navtoggle li:not(:last-child) {
-       display: none;
-     }
-
-     .navtoggle,
-     .navtoggle.responsive {
-       position: relative;
-     }
-
-     .navtoggle li .icon {
-       position: absolute;
-       right: 0;
-       top: 2px;
-       font-size: 20px;
-       padding-right: 0;
-     }
-
-     .navtoggle.responsive li {
-       display: block;
-     }
-
-     .navtoggle.responsive nav {
-       padding: 24px 0 0;
-     }
-
-     .navtoggle.responsive li {
-       display: block;
-       padding: 10px 0;
-       border-top: 1.5px dotted #000000;
-     }
-
-     .navtoggle.responsive li:last-child {
-       padding: 0 0 10px;
-     }
-
-     /* ------animation----- */
+     /* ----------animation---------- */
      @keyframes color-change {
        0% {
          fill: #edc655;
@@ -327,23 +272,75 @@
        animation: 34s cloud-move-reverse infinite alternate linear;
      }
 
-     /* ---------- Media queries------------- */
+     /* ---------- Navigation bar elements ---------- */
+     .logo {
+       max-width: 125px;
+       max-height: 150px;
+     }
+
+     header {
+       background-color: black;
+       text-align: unset;
+       position: relative;
+       padding: 10px 0 55px;
+       margin: 0;
+     }
+
+     main {
+       padding-top: 56px;
+     }
+
+     nav>ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+     }
+
+     .navtoggle li:not(:last-child) {
+       display: none;
+     }
+
+     .navtoggle, .navtoggle.responsive {
+       position: relative;
+     }
+
+     .navtoggle li .icon {
+       position: absolute;
+       right: 0;
+       top: 10px;
+       padding: 10px;
+       font-size: 20px;
+     }
+
+     .navtoggle.responsive li {
+       display: block;
+     }
+
+     .navtoggle.responsive nav {
+       padding: 24px 0 0;
+     }
+
+     .navtoggle.responsive li {
+       display: block;
+       padding: 10px 0;
+       border-top: 1px solid grey
+     }
+
+     .navtoggle.responsive li:last-child {
+       padding: 0 0 10px;
+     }
+
+     /* ---------- Media queries-------------------- */
      @media only screen and (min-width: 640px) {
        header {
          background-color: black;
          position: relative;
        }
 
-       .logo {
-         max-width: 125px;
-         max-height: 150px;
-         float: left;
-       }
-
        nav>ul {
          width: auto;
          float: right;
-         margin-top: 15px;
+         margin-top: 0;
          list-style-type: none;
          padding: 0;
        }

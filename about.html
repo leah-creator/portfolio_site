@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="author" content="LeahBateman">
   <meta name="About Me" content="Leah Bateman UX Portfolio">
   <meta name="viewport" content="width=device-width">
@@ -10,25 +11,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&amp;display=swap" rel="stylesheet">
+
+  <!--CDN code for fontawesome hamburger menu icon -->
+  <script src="https://kit.fontawesome.com/89081f1605.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <header>
-    <div class="container">
-      <div>
-        <picture><source srcset="img/logo/logo_small.png" media="(max-width:767px)"> <img src="img/logo/logo_large.png" class="logo" alt="My Image"></picture>
+    <!-- For the navigation -->
+     <div class="container">
+       <div class="navtoggle" id="myNavtoggle">
+         <picture>
+          <source srcset="img/logo/logo_small.png" media="(max-width:767px)"> <img src="img/logo/logo_large.png" class="logo" alt="My Image">
+        </picture>
       </div>
       <div>
         <nav>
           <ul>
-            <li>
-              <a href="index.html">Work</a>
-            </li>
-            <li>
-              <a href="about.html">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
           </ul>
         </nav>
       </div>
@@ -42,14 +46,21 @@
       <div class="container">
         <div class="row">
           <div class="column col-md-6 col-lg-7">
-            <picture><source srcset="img/profile_pic_small.jpg" media="(max-width:767px)"> <img src="img/profile_pic_large.jpg" alt="About Picture"></picture>
+            <picture>
+              <source srcset="img/profile_pic_small.jpg" media="(max-width:767px)"> <img src="img/profile_pic_large.jpg" alt="About Picture">
+            </picture>
           </div><!-- Row for Elements -->
           <div>
             <!-- row for columns -->
             <div>
               <div class="column col-md-6 col-lg-5">
                 <!-- column 1 -->
-                <p>Hello. I'm Leah, I am a UX designer with a specialization in Frontend Development. My interest in UX began 2 years ago when I was home alone, isolated during the pandemic. I live in Los Angeles and was surrounded by people struggling with depression, anxiety and self harm. I desperately wanted to find a way to help connect people and address mental-health while still taking precautions to stay home. My history in the film industry relied on an expertise in psychology, creativity, storytelling and empathy. This seemed like a perfect fit for a UX Career and so began my journey. My passions for mental health and creativity lead me to design two apps, one regarding mental-health. The app I designed landed me a job as UX intern at a company for 3+ months. I worked along side other UX designers on projects for teenagers partnering with SEL programs. Social, Emotional Learning. Working as a designer deepened my passion and enhanced my skills to work on creating products that provide user-centered solutions. My background as an actress has taught me the value of empathy, story telling, quickly improvising to create solutions, being a team player and working in a fast paced environment.</p>
+                <p>Hello. I'm Leah, I am a UX designer with a specialization in Frontend Development. My interest in UX began 2 years ago when I was home alone, isolated during the pandemic. I live in Los Angeles and was surrounded by people
+                  struggling with depression, anxiety and self harm. I desperately wanted to find a way to help connect people and address mental-health while still taking precautions to stay home. My history in the film industry relied on an
+                  expertise in psychology, creativity, storytelling and empathy. This seemed like a perfect fit for a UX Career and so began my journey. My passions for mental health and creativity lead me to design two apps, one regarding
+                  mental-health. The app I designed landed me a job as UX intern at a company for 3+ months. I worked along side other UX designers on projects for teenagers partnering with SEL programs. Social, Emotional Learning. Working as a
+                  designer deepened my passion and enhanced my skills to work on creating products that provide user-centered solutions. My background as an actress has taught me the value of empathy, story telling, quickly improvising to create
+                  solutions, being a team player and working in a fast paced environment.</p>
                 <p>When I am not designing- I am probably painting, hiking or writing music. Or possibly dog-sitting because I am obsessed with animals.</p><a href="resume/resume.pdf" class="button" download="">Download my resume</a>
               </div>
             </div><!-- end column 1 -->
@@ -100,18 +111,26 @@
     </div>
     <div>
       <p>Let's collaberate!</p>
-      <p>Message me on LinkedIn</p><a href="https://www.linkedin.com/in/leah-bateman-514242203" target="_blank"><svg public="-//W3C//DTD" svg=""> <svg height="67px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewbox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195 c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655 c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531 c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64 C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427 H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#007AB9;"></path></svg> </svg></a>
+      <p>Message me on LinkedIn</p><a href="https://www.linkedin.com/in/leah-bateman-514242203" target="_blank"><svg public="-//W3C//DTD" svg=""> <svg height="67px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1"
+            viewbox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path
+              d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195 c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655 c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531 c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64 C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427 H26.354z"
+              style="fill-rule:evenodd;clip-rule:evenodd;fill:#007AB9;"></path>
+          </svg> </svg></a>
       <div class="row">
         <div class="column col-md-6 col-lg-7">
-          <div class="imgwrapper"></div><!--end of text column-->
-         </div><!--end of row that holds 2 columns for animation-->
-          <div>
+          <div class="imgwrapper"></div>
+          <!--end of text column-->
+        </div>
+        <!--end of row that holds 2 columns for animation-->
+        <div>
           <p>Copyright of Leah Bateman 2022</p>
         </div>
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

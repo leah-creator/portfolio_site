@@ -15,14 +15,6 @@
        color: inherit;
      }
 
-     header {
-       background-color: black;
-       text-align: unset;
-       position: relative;
-       padding: 10px 0 55px;
-       margin: 0;
-     }
-
      body {
        background-color: #142126;
        text-align: center;
@@ -33,10 +25,6 @@
        color: white;
      }
 
-     main {
-       padding-top: 56px;
-     }
-     
      img {
        width: 100%;
      }
@@ -80,11 +68,6 @@
        font-size: 1.0em;
        font-weight: 400;
        padding: 50px 0px;
-     }
-
-     .logo {
-       max-width: 120px;
-       float: left;
      }
 
      .container {
@@ -214,34 +197,67 @@
        background-color: black;
      }
 
-     /* Navigation items are hidden except menu icon for screens less than 640px, small screens */
+     h3 ul {
+       width: auto;
+       float: center;
+       margin-top: 15px;
+       list-style-type: none;
+       padding: 10;
+     }
+
+     ul li {
+       display: inline-block;
+     }
+
+     h3 ul li {
+       padding: 0 25px;
+       text-transform: uppercase;
+       font-weight: 700;
+     }
+
+     /* ---------- Nav bar elements -------------------- */
+     .logo {
+       max-width: 125px;
+       max-height: 150px;
+       float:left
+     }
+
+     header {
+       background-color: black;
+       position: relative;
+       padding: 10px 0 55px;
+       margin: 0;
+     }
+
+     main {
+       padding-top: 56px;
+     }
+
+     .logo {
+       max-width: 150px;
+     }
+
      .navtoggle li:not(:last-child) {
        display: none;
      }
 
-     /* Menu bar's position is relative to the logo. navtoggle.responsive is a new class for later javascript work */
-     /* Postion of the menu icon in relationship to the header */
      .navtoggle,
      .navtoggle.responsive {
        position: relative;
      }
 
-     /* Menu bar icon*/
      .navtoggle li .icon {
        position: absolute;
        right: 0;
-       top: 20px;
-       font-size: 24px;
-       padding-right: 10px;
-       color: #000000;
+       top: 2px;
+       font-size: 20px;
+       padding-right: 0;
      }
 
-     /* Will override when responsive class is toggled */
      .navtoggle.responsive li {
        display: block;
      }
 
-     /* Styling for menu icon when toggled */
      .navtoggle.responsive nav {
        padding: 24px 0 0;
      }
@@ -249,13 +265,14 @@
      .navtoggle.responsive li {
        display: block;
        padding: 10px 0;
-       border-top: 1px solid rgba(255, 127, 80, 0.5);
+       border-top: 1.5px dotted #000000;
      }
 
      .navtoggle.responsive li:last-child {
        padding: 0 0 10px;
      }
 
+     /* ------animation----- */
      @keyframes color-change {
        0% {
          fill: #edc655;
@@ -310,11 +327,17 @@
        animation: 34s cloud-move-reverse infinite alternate linear;
      }
 
-     /* ---------- Media queries-------------------- */
+     /* ---------- Media queries------------- */
      @media only screen and (min-width: 640px) {
        header {
          background-color: black;
          position: relative;
+       }
+
+       .logo {
+         max-width: 125px;
+         max-height: 150px;
+         float: left;
        }
 
        nav>ul {
@@ -322,6 +345,7 @@
          float: right;
          margin-top: 15px;
          list-style-type: none;
+         padding: 0;
        }
 
        nav>ul>li {
@@ -334,36 +358,16 @@
          font-weight: 700;
        }
 
-       ul li {
-         display: inline-block;
+       nav>ul {
+         margin: 1em 0;
        }
 
-       h3 ul li {
-         padding: 0 25px;
-         text-transform: uppercase;
-         font-weight: 700;
-       }
-
-       /* Removes menu icon and lists navigation items for larger than 640px*/
        .navtoggle li:not(:last-child) {
          display: inline-block;
        }
 
        .navtoggle li:last-child {
          display: none;
-       }
-
-       .navtoggle.responsive li {
-         border-top: 0;
-       }
-
-       nav>ul {
-         list-style-type: none;
-         padding: 0;
-       }
-
-       nav>ul {
-         margin: 1em 0;
        }
 
        [class*="col-"] {

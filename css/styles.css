@@ -84,7 +84,7 @@
 
      #hero {
        text-align: left;
-       background-color: #ffe4c4;
+       background-color:#ebded9;
        display: inline-block;
        width: 100%;
      }
@@ -131,19 +131,19 @@
      }
 
      .email:hover {
-       color: #FFEF7F;
+       color: #ebded9;
        right: 0;
        text-decoration: none;
      }
 
      .email:hover:after {
-       border-color: #FFEF7F;
+       border-color: #ebded9;
        right: 0;
      }
 
      .email:after {
        border-radius: 1em;
-       border-top: 0.1em solid #FFEF7F;
+       border-top: 0.1em solid #ebded9;
        content: "";
        position: absolute;
        right: 100%;
